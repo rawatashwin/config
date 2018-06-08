@@ -75,6 +75,9 @@ nnoremap k gk
 nmap H 0
 nmap L $
 
+" Turn off highlight search
+nnoremap <silent> <leader>/ :nohls<cr>
+
 " Windows and buffer movement
 " Move between windows
 nnoremap <silent> <leader>k :wincmd k<cr>
@@ -154,6 +157,8 @@ Plugin 'ap/vim-css-color'
 Plugin 'dag/vim-fish'
 " Auto closing brackets etc
 Plugin 'raimondi/delimitmate'
+" You Complete Me
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()
 filetype plugin indent on
@@ -169,6 +174,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 
 " NERDTree
+let g:NERDTreeWinPos = 'right'
 " q works even if nerdtree is open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
